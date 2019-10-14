@@ -7,13 +7,26 @@ class Queue:
     def __init__(self):
         self.size = 0
         # Why is our DLL a good choice to store our elements?
-        # self.storage = ?
+
+        # A DLL can be traversed in both forward and backward direction and we
+        # can quickly insert a new node before a given node.
+        self.storage = DoublyLinkedList()
+
 
     def enqueue(self, value):
-        pass
+        self.size += 1
+        self.storage.add_to_head(value)
+        return self.len()
 
     def dequeue(self):
-        pass
+        if self.size > 0:
+            self.size -= 1
+            return self.storage.remove_from_tail()
+
+        elif self.size <= 0:
+            return None
 
     def len(self):
-        pass
+        return self.size
+
+
