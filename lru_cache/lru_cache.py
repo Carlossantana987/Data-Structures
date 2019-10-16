@@ -66,15 +66,6 @@ class LRUCache:
 
 
 
-
-
-
-
-
-
-
-
-
         # if self.size == self.limit:
         #     self.size -= 1
         #     return self.storage.remove_from_head()

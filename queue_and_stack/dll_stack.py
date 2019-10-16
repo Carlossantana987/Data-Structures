@@ -1,5 +1,5 @@
 import sys
-sys.path.append('../doubly_linked_list')
+sys.path.append('../queue_and_stack')
 from doubly_linked_list import DoublyLinkedList
 
 class Stack:
