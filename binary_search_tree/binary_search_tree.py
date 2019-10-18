@@ -70,15 +70,48 @@ class BinarySearchTree:
     def in_order_print(self, node):
         pass
 
+
+
+        # if self.left:
+        #     self.in_order_print(self.left.value)
+        #     print(self.value)
+        # if self.right:
+        #     self.in_order_print(self.right.value)
+        #     print(self.value)
+
+
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
-        pass
+
+        queue = Queue()
+
+        queue.enqueue(node)
+
+        while queue.len() > 0:
+            current = queue.dequeue()
+            print(current.value)
+            if current.left:
+                queue.enqueue(current.left)
+            if current.right:
+                queue.enqueue(current.right)
+
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
-        pass
+
+        stack = Stack()
+
+        stack.push(node)
+
+        while stack.len() > 0:
+            current = stack.pop()
+            print(current.value)
+            if current.left:
+                stack.push(current.left)
+            if current.right:
+                stack.push(current.right)
 
     # STRETCH Goals -------------------------
     # Note: Research may be required
